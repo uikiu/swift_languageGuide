@@ -14,8 +14,19 @@ func 声明并初始化常量和变量() {
     print("当前登录尝试次数：\(currentLoginAttempt), 允许最大登录尝试次数：\(maximumNumberOfLoginAttempts)")
 }
 
-func 声明在首次读取之前初始化(){
-    // TODO
+func 声明在首次读取之前初始化() {
+    let environment = "development"
+    let maximumNumberOfLoginAttempts: Int
+
+    if environment == "development" {
+        maximumNumberOfLoginAttempts = 100
+    } else {
+        maximumNumberOfLoginAttempts = 10
+    }
+
+    print("maximumNumberOfLoginAttempts: \(maximumNumberOfLoginAttempts)")
 }
 
-声明并初始化常量和变量()
+// 声明并初始化常量和变量()
+
+声明在首次读取之前初始化()
